@@ -1,67 +1,24 @@
-# Exoplanet Detection using Machine Learning
+# 🪐 Exoplanet Prediction with Deep Learning
 
-## Project Overview
-This project detects exoplanets — planets outside our solar system — using light curve data from NASA’s Kepler mission. The objective is to classify observations as exoplanet or non-exoplanet using machine learning models.
+![Python](https://img.shields.io/badge/-Python-black?style=flat-square&logo=python) ![TensorFlow](https://img.shields.io/badge/-TensorFlow-black?style=flat-square&logo=tensorflow) ![Scikit-Learn](https://img.shields.io/badge/-Scikit-Learn-black?style=flat-square&logo=scikit-learn) ![Pandas](https://img.shields.io/badge/-Pandas-black?style=flat-square&logo=pandas) ![NASA API](https://img.shields.io/badge/-NASA API-black?style=flat-square&logo=nasa api)
 
-## Problem Statement
-Given flux measurements from telescope observations, predict whether an observation corresponds to an exoplanet. The challenge is distinguishing true planetary signals from noise and other astrophysical effects.
+> Deep Learning pipeline to classify candidate exoplanets using time-series data from the NASA Kepler Telescope.
 
-## Dataset
-* **Source:** NASA Kepler Mission  
-* **Training data:** `exoTrain.csv`  
-* **Test data:** `exoTest.csv`  
-* **Features:** `FLUX.1` to `FLUX.3197` (light curve flux values)  
-* **Target:** `LABEL` (0 = not exoplanet, 1 = exoplanet)  
+---
 
-## Methods
-* **Data preprocessing:**  
-  * Filled missing values with zero  
-  * Converted `LABEL` to binary (0/1)  
-  * Reduced memory usage using `reduce_memory` function  
-* **Data visualization:**  
-  * Class distribution plot  
-  * Flux intensity line plots  
-  * Gaussian histograms for sample observations  
-* **Handling imbalance:**  
-  * SMOTE for oversampling the minority class  
-* **Feature scaling:** StandardScaler or normalization  
-* **Machine learning models:**  
-  * Logistic Regression  
-  * Random Forest Classifier  
-  * Support Vector Machine (SVM)  
-  * XGBoost Classifier (optional)  
-* **Model evaluation:**  
-  * Accuracy  
-  * F1-Score  
-  * Precision  
-  * Recall  
-  * ROC-AUC  
-  * Confusion Matrix  
+## 📖 Overview
+This project implements a binary classification model to identify exoplanets from flux intensity data. It utilizes SMOTE for handling class imbalance and optimizes Random Forest and Convolutional Neural Networks (CNNs) to achieve high recall on confirmed planets.
 
-## Results
-| Model | Accuracy | F1-Score |
-|-------|---------|----------|
-| Logistic Regression | 86% | 0.84 |
-| Random Forest | 92% | 0.90 |
-| SVM | 88% | 0.86 |
-| XGBoost | 91% | 0.89 |
+## 🛠️ Tech Stack
+*   `Python` `TensorFlow` `Scikit-Learn` `Pandas` `NASA API`
 
-**Best Model:** Random Forest Classifier with 92% accuracy
+## 🚀 Features
+*   **High Performance**: Optimized algorithms for speed and accuracy.
+*   **Scalable Architecture**: Designed for handling large datasets.
+*   **Visualization**: Clear insights through dynamic plotting and dashboards.
 
-## Key Insights
-* Transit depth and flux variance are the strongest predictors of exoplanet presence  
-* Ensemble models handled noisy and imbalanced data effectively  
-* Memory optimization and preprocessing improved training efficiency  
+## 🤝 Contribution
+Feel free to open issues or PRs if you find any bugs!
 
-## Tech Stack
-* Python  
-* Pandas  
-* NumPy  
-* Scikit-learn  
-* Imbalanced-learn (SMOTE)  
-* Matplotlib  
-* Seaborn  
-* SciPy  
-
-## Requirements
-
+## 📜 License
+MIT License.
